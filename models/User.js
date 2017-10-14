@@ -30,12 +30,6 @@ module.exports = function(sequelize, DataTypes)
         primaryKey: true
       }
   });
-  demoVideo : 
-      {
-        type: DataTypes.STRING,
-        allowNull: true,
-      }
-  };
 
     User.associate = function(models) {
 

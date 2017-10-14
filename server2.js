@@ -81,20 +81,18 @@ require("./routes/dummycases.js")(app);
 require("./routes/channel-routes.js")(app);
 require("./routes/testroute.js")(app);
 require("./routes/testcases.js")(app);
-
-/*require("./socketCalls.js")(io);
-*/
+require("./socketCalls.js")(io,app);
 
 app.get('/auth/facebook',
   passport.authenticate('facebook'));
 
 app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect: '/channelRendering' }),
+  passport.authenticate('facebook', { failureRedirect: '/channelrendering' }),
   function(req, res) {
     console.log("in callback to authentication route below");
     console.log(req.user);
-/*    db.OnlineUser.findOne({where:{UserfbId : req.user.fbId}})
-*/    res.redirect("/"+req.session)
+        console.log(req.session)
+         res.redirect("/reroute.html")
   });
 
 
