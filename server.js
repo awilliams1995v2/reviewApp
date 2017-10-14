@@ -1,4 +1,3 @@
-
 var db = require("./models");
 var express = require("express");
 var app = express();
@@ -66,10 +65,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-
-
-
-
 
 // Static directory
 var users = [];
