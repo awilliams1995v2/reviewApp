@@ -1,0 +1,30 @@
+ <div class="section section-gray">
+        <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <img class="img" src="{{this.thumbnail}}"/>
+                            </div>
+                                        <a href="#" class="btn btn-just-icon btn-warning btn-simple">
+                                           {{{this.rating}}}
+                                        </a>
+                                    <div class="card-content">
+                                        <h3 class="card-title">{{this.name}}</h3>
+                                        <h6 class="card-title">{{this.channelDescription}}</h3>
+                                    </div>
+                                            <div class="row">
+            <div class="col-md-6 col-sm-6">
+                {{#each this.reviews}}
+                {{> cards/reviewCardOnChannel}}
+                {{/each}}
+                         
+            <div class="col-md-6 col-sm-6">
+<iframe width="460" height="215" src="https://www.youtube.com/embed/xo2B67vz4HA" frameborder="0" allowfullscreen></iframe>          </div>
+        </div>
+                                </div>
+            </div>
+        </div>
+        </div>
+    </div>
